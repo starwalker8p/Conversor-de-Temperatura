@@ -8,7 +8,28 @@ const fahrenheit = document.getElementById("fahrenheit");
 const convertbtn = document.getElementById("convertbtn");
 let actype = 1;
 let actemp = 0; 
-
+type.addEventListener("change", event => {
+  switch (type.textContent) {
+    case "C°":
+      type.textContent = "C°";
+      leftt.textContent = "K";
+      rightt.textContent = "F°";
+      actype = 1;
+      break;
+    case "F°":
+      type.textContent = "F°";
+      leftt.textContent = "C°";
+      rightt.textContent = "K";
+      actype = 3;
+      break;
+    case "K":
+      type.textContent = "K";
+      leftt.textContent = "F°";
+      rightt.textContent = "C°";
+      actype = 2;
+      break;
+  }
+});
 leftt.addEventListener("click", event => {
   switch (type.textContent) {
     case "C°":
@@ -68,15 +89,19 @@ convertbtn.onclick = function(){
       actype = 1;
     }
     else if(actype === 3){
-      actemp = (parseFloat(display.value) -32) * 1.8;
+      actemp = (parseFloat(display.value) -32) / 1.8;
       type.textContent = "C°";
       actype = 1;
     }
+    type.textContent = "C°";
+    leftt.textContent = "K";
+    rightt.textContent = "F°";
+    actype = 1;
   }
   else if(kelvin.checked === true){
     if(actype === 1){
       actemp = parseFloat(display.value) + 273.15;
-      type.textContent = "K°";
+      type.textContent = "K";
       actype = 2;
     }
     else if(actype === 2){
@@ -85,10 +110,14 @@ convertbtn.onclick = function(){
       actype = 2;
     }
     else if(actype === 3){
-      actemp = (parseFloat(display.value) - 32) * 1.8 + 273.15; 
+      actemp = (parseFloat(display.value) - 32) / 1.8 + 273.15; 
       type.textContent = "K";
       actype = 2;
     }
+    type.textContent = "K";
+    leftt.textContent = "F°";
+    rightt.textContent = "C°";
+    actype = 2;
   }
   else if(fahrenheit.checked === true){
     if(actype === 1){
@@ -106,6 +135,10 @@ convertbtn.onclick = function(){
       type.textContent = "F°";
       actype = 3;
     }
+    type.textContent = "F°";
+    leftt.textContent = "C°";
+    rightt.textContent = "K";
+    actype = 3;
   }
   display.value = actemp.toFixed(2);
 }
