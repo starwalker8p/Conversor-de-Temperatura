@@ -1,0 +1,174 @@
+html{
+    background-color: black;
+    color: #adadad;
+    font-family: "Inter", sans-serif;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    background: linear-gradient(49deg, #2d4de0 0, #9f71f0 30%, #fc6277 58%, #f8ef6f 95%);
+    width: 380px;
+    height: 370px;
+    border-radius: 12px;
+    position: relative;
+}
+.card-container {
+    box-shadow: 1px 1px 10px 10px rgba(87, 87, 87, 0.3);
+    flex-direction: column;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 50px 40px;
+    background-color: #222222;
+    color: #929292;
+    border-radius: 5px;
+    transition: 0.2s ease;
+    text-align: center;
+}
+.card:hover .card-container {
+    border-radius: 5px;
+    top: 3px;
+    bottom: 3px;
+    left: 3px;
+    right: 3px;
+    box-shadow: 1px 1px 10px 10px rgba(87, 87, 87, 0.3);
+}
+h1{
+    text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.3);
+    margin: 0px 0px;
+}  
+.input{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.left{
+    position: absolute;
+    left: 70px;
+    top: 133px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Padrão */
+}
+.right{
+    position: absolute;
+    right: 70px;
+    top: 133px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Padrão */ 
+}
+.left:hover{
+    color: wheat;
+    cursor: pointer;
+}
+.right:hover{
+    color: wheat;
+    cursor: pointer;
+}
+#right{
+    margin-left: 13px;
+}
+#temperature::-webkit-inner-spin-button,#temperature::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+}
+#temperature{
+    position: absolute;
+    top: 125px;
+    padding: 10px;
+    text-align: center;
+    border-style: none;
+    height: 1vh;
+    color: wheat;
+    margin: 5px 0px;
+    background-color: #222222;
+    box-shadow: 1px 1px 10px 10px rgba(0, 0, 0, 0.3);
+}
+.input-placeholder {
+    position: absolute;
+    top: 133px;
+    right: 100px;
+    color: wheat;
+  }
+.radiobtns{
+    margin-top: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+#kelvintocelcius:checked + label{
+    background: linear-gradient(49deg, #2d4de0 0, #9f71f0 30%, #fc6277 58%, #f8ef6f 95%);
+    background-clip: text;
+    color: transparent; 
+    display: inline-block; 
+}
+#kelvintofahrenheit:checked + label{
+    background: linear-gradient(49deg, #2d4de0 0, #9f71f0 30%, #fc6277 58%, #f8ef6f 95%);
+    background-clip: text;
+    color: transparent; 
+    display: inline-block; 
+}
+#fahrenheittocelcius:checked + label{
+    background: linear-gradient(49deg, #2d4de0 0, #9f71f0 30%, #fc6277 58%, #f8ef6f 95%);
+    background-clip: text;
+    color: transparent; 
+    display: inline-block;
+}
+.radiobtns input[type="radio"] {
+    display: none;
+}
+.radiobtns input[type="radio"] + label {
+    position: relative;
+    padding-left: 30px; /* Adjust this value to control the size of the circle */
+    cursor: pointer;
+}
+.radiobtns input[type="radio"] + label::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 10px; /* Size of the circle */
+    height: 10px; /* Size of the circle */
+    border-radius: 50%;
+    border: 2px solid #ccc; /* Default border color */
+    background-color: #6b6b6b; /* Default background color */
+}
+.radiobtns input[type="radio"]:checked + label::before {
+    background: linear-gradient(49deg, #2d4de0 0, #9f71f0 30%, #fc6277 58%, #f8ef6f 95%);
+}
+#convertbtn{
+    border-style: none;
+    padding: 10px 30px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 10px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
+    color: wheat;
+    background-color: #222222;
+    transition: 0.2s ease;
+}
+#convertbtn:hover{
+    border: 1px solid purple;
+    cursor: pointer;
+}
+#temperature:hover{
+    border: 1px solid purple;
+}

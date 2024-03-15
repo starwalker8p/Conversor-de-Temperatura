@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conversor de temperatura</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <div class="card-container">
+            <h1>Temperature Convertion</h1>
+            <div class="input">
+                <div class="left" id="left">
+                    K
+                </div>
+                <input type="number" name="temperature" id="temperature">
+                <span class="input-placeholder" id="typett">C°</span>
+                <div class="right" id="right">
+                    F°
+                </div>
+            </div>  
+            <div class="radiobtns">
+                <div class="c">
+                    <input type="radio" name="radio" id="celcius">
+                    <label for="celcius">Celcius</label><br>
+                </div>
+                <div class="k">
+                    <input type="radio" name="radio" id="kelvin">
+                    <label for="kelvin">Kelvin</label><br>
+                </div>
+                <div class="f">
+                    <input type="radio" name="radio" id="fahrenheit">
+                    <label for="fahrenheit">Fahrenheit</label><br>
+                </div>
+            </div>
+            <div class="convert">
+                <button id="convertbtn">Convert</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
