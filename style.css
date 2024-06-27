@@ -12,6 +12,7 @@ html{
     background: linear-gradient(49deg, #2d4de0 0, #9f71f0 30%, #fc6277 58%, #f8ef6f 95%);
     width: 380px;
     height: 400px;
+    padding-bottom: 10px;
     border-radius: 12px;
     position: relative;
 }
